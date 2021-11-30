@@ -1,4 +1,4 @@
-@url= http://localhost:3025
+@url= http://localhost:3033
 
 
 ### show all users 
@@ -6,12 +6,13 @@ GET {{url}}/
 content-type: application/json
 
 ### Add a user TEST
-POST {{url}}/signup
+POST {{url}}/create
 content-type: application/json
 
 {
     "user": {
-        "login": "Test",
-        "password": "eeenonso10"
+        "userName": "Test",
+        "Hash": "eeenonso10",
+        "email": "test@example.com"
     }
 }
