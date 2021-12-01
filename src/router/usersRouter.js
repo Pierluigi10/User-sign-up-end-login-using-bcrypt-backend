@@ -13,7 +13,7 @@ const usersRouter = express.Router();
 usersRouter.post("/create", async (req, res) => {
   const userObj = req.body;
   if (userObj.password1 !== userObj.password2) {
-    res.status(500);
+    res.status(500).send({ error: 'the two passwords are diffent' });
   } else {
     bcrypt.genSalt(saltRounds, function (err, salt) {
       bcrypt.hash(myPlaintextPassword, salt, async (err, hash) => {

@@ -1,18 +1,43 @@
 @url= http://localhost:3033
 
-
-### show all users 
-GET {{url}}/
-content-type: application/json
-
-### Add a user TEST
+### CREATE user with same password
 POST {{url}}/create
 content-type: application/json
-
+ 
 {
-    "user": {
-        "userName": "Test",
-        "Hash": "eeenonso10",
-        "email": "test@example.com"
-    }
+    "userName": "gggg",
+    "password1": "12345678",
+    "password2": "12345678",
+    "email": "username1@mail.com"
 }
+
+
+### CREATE user with different password (false)
+POST {{url}}/create
+content-type: application/json
+ 
+{
+    "userName": "gggg",
+    "password1": "12345678",
+    "password2": "87654321",
+    "email": "username1@mail.com"
+}
+
+### READ users 
+GET {{url}}
+content-type: application/json
+
+### UPDATE user
+PATCH {{url}}/update/61a644b784e5e9aa8a03c508
+content-type: application/json
+ 
+{
+    "userName": "ccc",
+    "password1": "12345678",
+    "password2": "12345678",
+    "email": "username1@mail.com"
+}
+
+### DELETE user
+DELETE {{url}}/delete/61a6429d073131bc6aee5a60
+content-type: application/json
