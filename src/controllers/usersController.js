@@ -13,7 +13,8 @@ export const readOneUser = async (id) => {
 };
 
 export const readOneUserWithUserName = async (userName) => {
-  return await UsersModel.find({ userName});
+  const userArray = await UsersModel.find({ userName });
+  return userArray.length === 0 ? null : userArray[0];
 };
 
 export const updateUser = async (id, updateFields) => {

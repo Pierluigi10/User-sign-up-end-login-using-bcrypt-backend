@@ -5,7 +5,7 @@ POST {{url}}/create
 content-type: application/json
  
 {
-    "userName": "new test",
+    "userName": "gggg",
     "password1": "12345678",
     "password2": "12345678",
     "email": "test@mail.com"
@@ -26,6 +26,26 @@ content-type: application/json
 ### READ users 
 GET {{url}}
 content-type: application/json
+
+### LOGIN user 
+POST {{url}}/login
+content-type: application/json
+ 
+{
+    "userName": "gggg",
+    "password": "12345678"
+}
+
+
+### LOGIN user false
+POST {{url}}/login
+content-type: application/json
+ 
+{
+    "userName": "g00g",
+    "password": "12345678"
+}
+
 
 ### UPDATE user
 PATCH {{url}}/update/61a644b784e5e9aa8a03c508
