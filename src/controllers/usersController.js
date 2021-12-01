@@ -12,6 +12,10 @@ export const readOneUser = async (id) => {
   return await UsersModel.find(id);
 };
 
+export const readOneUserWithUserName = async (userName) => {
+  return await UsersModel.find({ userName});
+};
+
 export const updateUser = async (id, updateFields) => {
   return await UsersModel.findByIdAndUpdate(id, updateFields, {
     new: true,
