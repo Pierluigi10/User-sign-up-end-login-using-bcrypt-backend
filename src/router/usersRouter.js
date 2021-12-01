@@ -6,7 +6,7 @@ import * as usersController from "../controllers/usersController.js";
 const saltRounds = 8;
 const myPlaintextPassword = "password";
 
-mongoose.connect("mongodb://localhost:27017/bcrypt");
+mongoose.connect("mongodb://localhost:27017/userMgtApp");
 const usersRouter = express.Router();
 
 // users: CREATE
