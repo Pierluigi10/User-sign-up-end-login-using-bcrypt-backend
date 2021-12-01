@@ -5,10 +5,10 @@ POST {{url}}/create
 content-type: application/json
  
 {
-    "userName": "gggg",
+    "userName": "new test",
     "password1": "12345678",
     "password2": "12345678",
-    "email": "username1@mail.com"
+    "email": "test@mail.com"
 }
 
 
